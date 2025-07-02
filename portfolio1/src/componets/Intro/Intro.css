@@ -1,0 +1,348 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.intro {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 4rem 2rem;
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+  min-height: 100vh;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 10%;
+}
+
+.intro-left {
+  flex: 1;
+  padding-left: 5rem;
+  opacity: 1;
+  animation: fadeIn 1s ease-out forwards;
+}
+
+.static-text1 {
+  font-size: 3.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: rgb(119, 0, 255);
+}
+
+.static-text2 {
+  font-size: 3.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: rgb(187, 0, 255);
+}
+
+.typing-line {
+  font-size: 4rem;
+  font-weight: 600;
+  font-family: 'Courier New', Courier, monospace;
+  color: #f4f3f2;
+  white-space: nowrap;
+  letter-spacing: 1px;
+}
+
+.typing-text {
+  color: #faf9f8;
+}
+
+.cursor {
+  display: inline-block;
+  margin-left: 3px;
+  width: 10px;
+  animation: blink 0.8s infinite;
+}
+
+.intro-right {
+  flex: 1;
+  order: 2;
+  width: 100%;
+  max-width: 700px;
+  aspect-ratio: 3 / 4;
+  max-height: 80vh;
+  min-height: 300px;
+  background-image: url('../../assets/profile.webp');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-top: 0.5rem;
+  animation: fadeIn 1s ease-out forwards;
+  opacity: 1;
+}
+
+.hireme {
+  background: white;
+  object-fit: cover;
+  margin: 0 0.25rem;
+  height: 1rem;
+}
+
+.hirebtn {
+  background: white;
+  margin: 1rem 0;
+  padding: 0.75rem 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 2rem;
+}
+/* ================= Hire Me Form Popup ================= */
+
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.5); /* Transparent grey */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.popup-content {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 16px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.hire-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.hire-form input {
+  padding: 0.6rem;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.submit-btn {
+  padding: 0.6rem;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background-color: #0056b3;
+}
+
+/* ========== MEDIA QUERIES ========== */
+
+/* ✅ Extra large desktops (≥1400px) */
+@media screen and (max-width: 1400px) {
+  .intro-right {
+    max-height: 85vh;
+  }
+}
+
+/* ✅ Large desktops (≥1200px) */
+@media screen and (max-width: 1200px) {
+  .intro-right {
+    margin-right: -4%;
+    transform: translateX(10%);
+  }
+}
+
+/* ✅ Laptops & large tablets (≥992px) */
+@media screen and (max-width: 992px) {
+  .intro {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem 1rem 3rem;
+    min-height: 130vh;
+  }
+
+  .intro-left {
+    order: 1;
+    padding: 1rem;
+    opacity: 1;
+  }
+
+  .intro-right {
+    transform: none;
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    max-height: 75vh;
+    margin-top: 0.5rem;
+    opacity: 1;
+  }
+
+  .static-text1,
+  .static-text2,
+  .typing-line {
+    font-size: 2rem;
+  }
+}
+
+/* ✅ Tablets (≥768px) */
+@media screen and (max-width: 768px) {
+  .intro-left{
+    width: 100%;
+  }
+  .intro-right {
+    max-height: 60vh;
+  }
+
+  .typing-line {
+    font-size: 1.6rem;
+  }
+
+  .static-text1,
+  .static-text2 {
+    font-size: 1.8rem;
+  }
+}
+
+/* ✅ Mobile devices (≥576px) */
+/* ✅ For screens ≤ 576px */
+/* ✅ For screens ≤ 576px */
+/* ✅ For screens ≤ 576px */
+/* ✅ For screens ≤ 576px */
+@media screen and (max-width: 576px) {
+  .intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem 1rem;
+    min-height: 100vh;
+    gap: 2rem;
+  }
+
+  .intro-left {
+    width: 170%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1rem;
+  }
+
+  .static-text1,
+  .static-text2 {
+    font-size: 2.6rem;
+    font-weight: 800;
+    color: rgb(119, 0, 255);
+    margin: 0.3rem 0;
+  }
+
+  .typing-line {
+    font-size: 2.6rem;
+    font-weight: 700;
+    margin-top: 0.5rem;
+  }
+
+  .hirebtn {
+    margin-top: 1rem;
+    padding: 0.9rem 2.2rem;
+    font-size: 1.1rem;
+    border-radius: 2rem;
+  }
+
+  .intro-right {
+    margin-top: 1rem;
+    width: 100%;
+    max-width: 340px;
+    height: auto;
+    aspect-ratio: 3 / 4;
+    background-image: url('../../assets/profile.webp');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+
+/* ✅ For screens ≤ 540px */
+@media screen and (max-width: 540px) {
+  .static-text1,
+  .static-text2 {
+    font-size: 2.4rem;
+  }
+
+  .typing-line {
+    font-size: 2.5rem;
+  }
+
+  .intro-right {
+    max-width: 320px;
+  }
+}
+
+/* ✅ For screens ≤ 420px */
+@media screen and (max-width: 420px) {
+  .static-text1,
+  .static-text2 {
+    font-size: 2.2rem;
+  }
+
+  .typing-line {
+    font-size: 2.3rem;
+  }
+
+  .intro-right {
+    max-width: 280px;
+  }
+
+  .intro-left {
+    padding: 0 0.8rem;
+  }
+}
+
+/* ✅ For screens ≤ 344px */
+@media screen and (max-width: 344px) {
+  .static-text1,
+  .static-text2 {
+    font-size: 2rem;
+  }
+
+  .typing-line {
+    font-size: 2.1rem;
+  }
+
+  .intro-right {
+    max-width: 250px;
+  }
+
+  .intro-left {
+    padding: 0 0.6rem;
+  }
+}

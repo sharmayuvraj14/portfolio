@@ -1,0 +1,56 @@
+.projects {
+  padding: 4rem 2rem;
+  background-color: #1e1e1e;
+  color: white;
+  text-align: center;
+  margin-top: 10%;
+}
+
+.projects-title {
+  font-size: 3rem;
+  color: #ff4ddb;
+  margin-bottom: 2rem;
+}
+
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+/* Make project cards equal size and stay in a row */
+.project-link {
+  text-decoration: none;
+  color: inherit;
+  width: 280px; /* Fixed width for consistency */
+  flex-shrink: 0;
+}
+
+.project-card {
+  background-color: #2e2e2e;
+  border-radius: 12px;
+  padding: 1.5rem;
+  min-height: 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(255, 77, 219, 0.3);
+}
+
+.project-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+  color: #ff4ddb;
+}
+
+.project-card p {
+  font-size: 0.95rem;
+  color: #f0f0f0;
+  flex-grow: 1;
+}
